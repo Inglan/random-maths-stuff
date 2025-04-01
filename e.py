@@ -1,8 +1,11 @@
-import math
+import math, decimal
+from decimal import *
 
-result = 2
+getcontext().prec = 100
 
-for i in range(2, 690):
-    result = result + (1/math.factorial(i))
+result = Decimal(2)
+
+for i in range(2, getcontext().prec+3):
+    result = result + Decimal(1/math.factorial(i))
 
 print(result)
