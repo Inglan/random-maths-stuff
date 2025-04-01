@@ -1,11 +1,11 @@
 import math, decimal
 from decimal import *
 
-getcontext().prec = 100
+getcontext().prec = int(input("Precision: "))
 
-result = Decimal(2)
+result = Decimal(0)
 
-for i in range(2, getcontext().prec+3):
+for i in range(0, getcontext().prec+2):
     result = result + Decimal(1/math.factorial(i))
 
 print(result)
